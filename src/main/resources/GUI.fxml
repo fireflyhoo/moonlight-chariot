@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<?import cn.yayatao.db.moonlight.chariot.Controller?>
+
+<Pane fx:controller="cn.yayatao.db.moonlight.chariot.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="829.0" prefWidth="992.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="14.0" layoutY="21.0" prefHeight="211.0" prefWidth="388.0" style="-fx-border-color: #D8BFD8;">
+         <children>
+            <TextField fx:id="left_ip" layoutX="45.0" layoutY="42.0" prefHeight="23.0" prefWidth="169.0" />
+            <Label layoutX="22.0" layoutY="46.0" text="IP" />
+            <Label layoutX="221.0" layoutY="46.0" text="端口" />
+            <TextField fx:id="left_port" layoutX="250.0" layoutY="42.0" prefHeight="23.0" prefWidth="62.0" />
+            <ChoiceBox fx:id="left_type" layoutX="45.0" layoutY="83.0" prefHeight="23.0" prefWidth="169.0" />
+            <Label layoutX="8.0" layoutY="87.0" text="类型" />
+            <Label layoutX="10.0" layoutY="126.0" text="用户" />
+            <TextField fx:id="left_user" layoutX="45.0" layoutY="122.0" prefHeight="23.0" prefWidth="169.0" />
+            <Label layoutX="8.0" layoutY="154.0" text="密码" />
+            <TextField fx:id="left_password" layoutX="45.0" layoutY="150.0" prefHeight="23.0" prefWidth="169.0" />
+            <Button fx:id="left_connection" layoutX="227.0" layoutY="83.0" mnemonicParsing="false" onAction="#doConnectionLeft" text="测试连接" />
+            <Label layoutX="221.0" layoutY="115.0" text="选择数据库" />
+            <ChoiceBox fx:id="left_database" layoutX="221.0" layoutY="139.0" prefHeight="23.0" prefWidth="160.0" />
+         </children>
+      </Pane>
+      <Button fx:id="relatively" layoutX="475.0" layoutY="115.0" mnemonicParsing="false" onAction="#doCompare" text="比较" />
+      <Pane layoutX="586.0" layoutY="21.0" prefHeight="211.0" prefWidth="388.0" style="-fx-border-color: #D8BFD8;">
+         <children>
+            <TextField fx:id="right_ip" layoutX="45.0" layoutY="42.0" prefHeight="23.0" prefWidth="169.0" />
+            <Label layoutX="22.0" layoutY="46.0" text="IP" />
+            <Label layoutX="221.0" layoutY="46.0" text="端口" />
+            <TextField fx:id="right_port" layoutX="250.0" layoutY="42.0" prefHeight="23.0" prefWidth="62.0" />
+            <ChoiceBox fx:id="right_type" layoutX="45.0" layoutY="83.0" prefHeight="23.0" prefWidth="169.0" />
+            <Label layoutX="8.0" layoutY="87.0" text="类型" />
+            <Label layoutX="10.0" layoutY="126.0" text="用户" />
+            <TextField fx:id="right_user" layoutX="45.0" layoutY="122.0" prefHeight="23.0" prefWidth="169.0" />
+            <Label layoutX="8.0" layoutY="154.0" text="密码" />
+            <TextField fx:id="right_password" layoutX="45.0" layoutY="150.0" prefHeight="23.0" prefWidth="169.0" />
+            <Button fx:id="right_connection" layoutX="229.0" layoutY="83.0" mnemonicParsing="false" onAction="#doConnectionRight" text="测试连接" />
+            <ChoiceBox fx:id="right_database" layoutX="233.0" layoutY="143.0" prefHeight="23.0" prefWidth="147.0" />
+            <Label layoutX="233.0" layoutY="124.0" text="选择数据库" />
+         </children>
+      </Pane>
+      <Pane fx:id="web" layoutX="14.0" layoutY="240.0" prefHeight="587.0" prefWidth="970.0" style="-fx-border-color: #D8BFD8;">
+         <children>
+            <WebView fx:id="web_view" layoutX="-1.0" prefHeight="587.0" prefWidth="976.0" />
+         </children></Pane>
+   </children>
+</Pane>
